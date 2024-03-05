@@ -1,8 +1,9 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from 'react';
 
-export default function Watch() {
+function WatchComponent() {
     const videoSrc = useSearchParams().get("v");
     const videoPrefix = process.env.NEXT_PUBLIC_VIDEO_PREFIX || "";
     const videoFilename = videoSrc ? videoSrc.split("/").pop() : "";
@@ -15,5 +16,13 @@ export default function Watch() {
                 <p className="font-bold py-4">{videoFilename?.split("-")[2]}</p>
             </div>
         </div>
+    );
+}
+
+export default function Watch() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <WatchComponent />
+        </Suspense>
     );
 }
