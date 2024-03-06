@@ -17,4 +17,6 @@ https://youtube-clone.ajaymandal.me
 - Firebase Firestore
 - Google Cloud Platform - Artifact, Bucket, Cloud Run, Pub/Sub, IAM & Admin, Storage
 - Docker
-  
+
+### System Design Overview
+![alt text](https://github.com/ajay-mandal/youtube-clone/blob/acf0030779b5fc65f92bb9eca5602a62026e685d/docs/yt-clone-system-design.png?raw=true)
